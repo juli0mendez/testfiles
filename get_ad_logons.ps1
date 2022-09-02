@@ -6,6 +6,6 @@
     # Logon Successful Events
     # Local (Logon Type 2)
     if (($e.EventID -eq 4624 ) -and ($e.ReplacementStrings[8] -notlike 5)){
-      write-host $e.TimeGenerated "`tStatus: Success`tUser: "$e.ReplacementStrings[5] "`tWorkstation: "$e.ReplacementStrings[11] "`tLogonType: "$e.ReplacementStrings[8]
+      write-host $e.TimeGenerated "`tStatus: Success`tUser: "$e.ReplacementStrings[5] "`tWorkstation: "$e.ReplacementStrings[11] "`tLogonType: "$e.ReplacementStrings[8] | out-file c:\temp\jajaja.txt
       }
     } 
